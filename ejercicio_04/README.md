@@ -6,7 +6,7 @@ Para este ejemplo se hace uso de la creación de un usuario, el cual va a ejecut
 
 # Repositorio
 ```
-https://hub.docker.com/repository/docker/h3roku/ejer04
+https://hub.docker.com/r/h3roku/ejer04
 
 ```
 
