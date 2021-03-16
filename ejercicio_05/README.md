@@ -17,9 +17,9 @@ HEALTHCHECK --interval==1m --timeout=3s CMD "comando"
 
 Siendo comandó un script o simplemente un comando de consola realizando una tarea de check sobre un servicio activo.
 
-Esta sentencia se puede agregar en el Dockerfile, luego es posible ver el estado del servicio por medio de *docker container inspect name* o también más accesible por medio de *docker ps* para ver la leyenda del servicio con el resultado de salud.
+Esta sentencia se puede agregar en el Dockerfile. Es posible ver el estado del servicio por medio de *docker container inspect name* o también más accesible por medio de *docker ps* para ver la leyenda del servicio con el resultado de *salud*.
 
-Este último comando nos muestra un estado *unhealthy* si no nuestro servicio no es saludable, con los detalles como la marca de tiempo de inicio y fin así como la respuesta de salida.
+Este último comando nos muestra un estado *unhealthy* si nuestro servicio no esta saludable, con los detalles como: la marca de tiempo de inicio y fin, así como la respuesta de salida.
 
 También es posible utilizarlo por medio de cmdline cli en lugar de declarativo, como en el siguiente ejemplo:
 
@@ -45,11 +45,11 @@ Al construir esta imagen *Y* se ejecuta el trigger que corresponde con el comand
 Puede ser útil a la hora de construir imágenes con capas de dependencias o tambien para realizar algún test de implementación.
 
 
-# VOLUME
+# VOLUMES
 Esta sentencia permite al contenedor agregar persistencia y también dar acceso a los datos al servicio que se esté ejecutando.
 
 ```
-VOLUME ["dir","file",...]. 
+VOLUMES ["dir","file",...]. 
 ```
 
 Permite ingresar una cantidad finita de recursos de acceso, a fin de exponer y realizar un enlace hacia archivos/directorios, similar al comando mount de GNU/Linux. Su uso es útil por ejemplo en caso de uso de una DB, en la cual necesito guardar los datos en un directorio en un tier de disco determinado, de forma tal que me permita mantener la información del servicio luego de destruir el contenedor. Otro caso podría ser el ingreso de configuración de una aplicación, por ejemplo se puede centralizar un directorio donde los servicios que se ejecutan en distintos contenedores lean un directorio particular centralizado al que todos tengan acceso y lograr configurar lo justo y necesario para funcionar, puede ser un archivo.properties, un certificado de acceso o el resultado de un repo modificado.
