@@ -1,5 +1,5 @@
 Ejercicio 06.
-===================0
+===================
 # Caso de uso balanceador
 
 Para este caso se utiliza un archivo de configuración de nginx que permite facilitar la información relacionada con cada app. Para ello se utiliza docker-compose.
