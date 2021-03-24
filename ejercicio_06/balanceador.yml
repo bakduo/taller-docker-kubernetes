@@ -7,7 +7,7 @@ services:
     ports:
      - "8081:80"
   webapp1:
-    image: "h3roku/ejer04:v1"
+    image: "nicopaez/password-api"
   webapp2:
-    image: "h3roku/ejer04:v1"
+    image: "nicopaez/password-api"
 
