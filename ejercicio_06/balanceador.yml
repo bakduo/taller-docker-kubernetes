@@ -3,17 +3,11 @@ services:
   balancer:
     image: nginx
     volumes:
-     - /tmp/nginx/:/etc/nginx/
+     - ./nginx/:/etc/nginx/
     ports:
      - "8081:80"
   webapp1:
     image: "h3roku/ejer04:v1"
   webapp2:
     image: "h3roku/ejer04:v1"
-
-networks:
-  default:
-    external:
-      name: appnetwork
-
 
