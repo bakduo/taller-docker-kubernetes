@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ejer7
+  labels:
+    app: ejer7
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ejer7
+  template:
+    metadata:
+      labels:
+        app: ejer7
+    spec:
+      containers:
+      - name: ejer7
+        image: nicopaez/password-api
+        ports:
+        - containerPort: 3000

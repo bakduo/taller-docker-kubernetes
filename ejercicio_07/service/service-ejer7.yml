@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-ejer7
+  labels:
+    app: service-ejer7
+spec:
+  selector:
+    app: ejer7
+  ports:
+   - protocol: TCP
+     port: 8082
+     targetPort: 3000
