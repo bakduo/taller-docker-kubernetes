@@ -11,7 +11,7 @@ kubectl apply -f deployment/ejer7.yml
 
 kubectl apply -f service/service-ejer7.yml
 
-# Mostrar los endpoints que a los que dispara el servicio
+# Mostrar los endpoints relacionados con el service.
 
 kubectl get endpoints
 
